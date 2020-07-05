@@ -34,7 +34,9 @@ Set CheckM database - https://github.com/Ecogenomics/CheckM/wiki
 checkm data setRoot <checkm_data_dir>
 ```
 
-Kraken2 databases - https://github.com/DerrickWood/kraken2/wiki/Manual#standard-kraken-2-database
+Download Kraken2 databases - https://github.com/DerrickWood/kraken2/wiki/Manual#standard-kraken-2-database
+
+(note: I am running this script with 8 cores and 64 GB of RAM)
 
 Standard dabatase (db1):
 ``` bash
