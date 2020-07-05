@@ -17,7 +17,7 @@ This script was written to automate the analysis of metagenomic data and is curr
 5. Bin megahit contigs with MaxBin2, MetaBAT2, and Concoct.
 6. Check bin completeness and contamination with CheckM.
 7. Refine bins and output Step 5 to Step 9 from the [metaWRAP guide](https://github.com/bxlab/metaWRAP/blob/master/Usage_tutorial.md) (work in progress).
-8. Classify clean short-reads, unmapped short-reads, and contigs.
+8. Classify clean short-reads, unmapped short-reads, and contigs. Bins are classified by meteWRAP.
 9. Predict contig genes with prokka and prodigal.
 
 ## Requirements
