@@ -10,15 +10,15 @@ This script was written to automate the analysis of metagenomic data and is curr
 
 ### Methods
 
-1. Map short-reads to a reference genome(s) (if applicable) with bwa.
-2. Split mapped and unmapped reads with samtools.
-3. Assemble contigs using the unmapped short-reads with megahit.
-4. Test assembly quality by mapping clean short-reads to contigs using bwa.
-5. Bin megahit contigs with MaxBin2, MetaBAT2, and Concoct.
-6. Check bin completeness and contamination with CheckM.
+1. Map short-reads to a reference genome(s) (if applicable) with [BWA](https://github.com/lh3/bwa).
+2. Split mapped and unmapped reads with [Samtools](https://github.com/samtools/samtools).
+3. Assemble contigs using the unmapped short-reads with [MEGAHIT] https://github.com/voutcn/megahit.
+4. Test assembly quality by mapping clean short-reads to contigs using [BWA](https://github.com/lh3/bwa).
+5. Bin megahit contigs with [MaxBin2](https://sourceforge.net/projects/maxbin2/), [MetaBAT2](https://bitbucket.org/berkeleylab/metabat/src/master/), and [Concoct](https://github.com/BinPro/CONCOCT).
+6. Check bin completeness and contamination with [CheckM].
 7. Refine bins and output Step 5 to Step 9 from the [metaWRAP guide](https://github.com/bxlab/metaWRAP/blob/master/Usage_tutorial.md) (work in progress).
-8. Classify clean short-reads, unmapped short-reads, and contigs. Bins are classified by metaWRAP.
-9. Predict contig genes with prokka and prodigal.
+8. Classify clean short-reads, unmapped short-reads, and contigs with [kraken2](https://github.com/DerrickWood/kraken2). Bins are classified by [MetaWRAP](https://github.com/bxlab/metaWRAP).
+9. Predict contig genes with [Prokka](https://github.com/tseemann/prokka) and [Prodigal](https://github.com/hyattpd/Prodigal).
 
 ## Requirements
 Note: This script was written on a Linux machine with 8 cores and 64 GB of RAM.
