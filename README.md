@@ -91,14 +91,14 @@ Results:
                                                /log/options.json
 
 09_megahit_contigs_check/$sample_id/$sample_id.metalarge.abundance.txt
-				                               /$sample_id.metalarge.check.sam
-				                               /$sample_id.metalarge.check.txt
-				                               /$sample_id.metalarge.depth.txt
-				                               /$sample_id.metalarge.sorted.bam
+				   /$sample_id.metalarge.check.sam
+				   /$sample_id.metalarge.check.txt
+				   /$sample_id.metalarge.depth.txt
+				   /$sample_id.metalarge.sorted.bam
                                    /$sample_id.metalarge.sorted.bam.bai
 
 10_binning/$sample_id/$sample_id.bin_refinement
-		                   /$sample_id.blobology
+		     /$sample_id.blobology
                      /$sample_id.concoct
                      /$sample_id.concoct.checkm
                      /$sample_id.maxbin2
@@ -107,7 +107,7 @@ Results:
                      /$sample_id.metabat2.checkm
 
 11_taxonomy/1_unmapped
-	          /2_shortreads
+	   /2_shortreads
            /3_contigs
 
 12_genes/prodigal
