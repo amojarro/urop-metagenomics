@@ -53,7 +53,7 @@ kraken2-build --threads N --build --db $path/to/db2
 ```
 
 ## Using UROP Metagenomics Pipeline
-Define the following paths and parameters:
+Define the following paths and parameters in urop-meta.sh:
 ``` bash
 clean_short_reads="" # These are your cleaned short reads e.g., quality filtered and adapters have been removed
 reference_genome="" # Human contamination, etc.
