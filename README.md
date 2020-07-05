@@ -23,7 +23,7 @@ Define the following paths and parameters.
 ``` bash
 clean_short_reads="" # These are your cleaned short reads e.g., quality filtered and adapters have been removed
 reference_genome="" # Human contamination, etc.
-megahit_preset="meta-large" # meta-large meta-sensitive
+megahit_preset="" # meta-large or meta-sensitive
 threads="" # Number of CPU cores
 output_folder="" # Where should this write to?
 sample_id="" # Define your sample ID
@@ -33,4 +33,5 @@ kraken_db2="" # Plants, fugi, and protozoa?
 Runing the pipeline.
 ``` bash
 chmod +x urop-meta.sh
+./urop-meta.sh
 ```
