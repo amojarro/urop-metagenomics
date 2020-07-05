@@ -16,7 +16,7 @@ This script was written to automate the analysis of metagenomic data and is curr
 4. Test assembly quality by mapping clean short-reads to contigs using [BWA](https://github.com/lh3/bwa).
 5. Bin megahit contigs with [MaxBin2](https://sourceforge.net/projects/maxbin2/), [MetaBAT2](https://bitbucket.org/berkeleylab/metabat/src/master/), and [Concoct](https://github.com/BinPro/CONCOCT).
 6. Check bin completeness and contamination with [CheckM](https://github.com/Ecogenomics/CheckM).
-7. Refine bins and output Step 5 to Step 9 from the [metaWRAP guide](https://github.com/bxlab/metaWRAP/blob/master/Usage_tutorial.md) (work in progress).
+7. Refine bins and output Step 5 to Step 9 from the [MetaWRAP guide](https://github.com/bxlab/metaWRAP/blob/master/Usage_tutorial.md) (work in progress).
 8. Classify clean short-reads, unmapped short-reads, and contigs with [kraken2](https://github.com/DerrickWood/kraken2). Bins are classified by [MetaWRAP](https://github.com/bxlab/metaWRAP).
 9. Predict contig genes with [Prokka](https://github.com/tseemann/prokka) and [Prodigal](https://github.com/hyattpd/Prodigal).
 
