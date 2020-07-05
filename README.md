@@ -8,10 +8,7 @@ Angel Mojarro & Alexis D Cho
 
 ### Motivation
 
-
-
 ### Methods
-
 
 ## Requirements
  
