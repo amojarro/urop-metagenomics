@@ -39,6 +39,7 @@ Standard dabatase (db1)
 ``` bash
 kraken2-build --standard --threads N --db $DBNAME
 ```
+
 Custom database (db2)
 ``` bash
 kraken2-build --threads N --download-taxonomy --db $DBNAME
