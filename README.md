@@ -35,6 +35,7 @@ checkm data setRoot <checkm_data_dir>
 ```
 
 Kraken2 databases - https://github.com/DerrickWood/kraken2/wiki/Manual#standard-kraken-2-database
+
 Standard dabatase (db1)
 ``` bash
 kraken2-build --standard --threads N --db $DBNAME
