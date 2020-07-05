@@ -28,7 +28,7 @@ Install and setup MiniConda 3 - https://docs.conda.io/en/latest/miniconda.html
 chmod +x chmod +x Miniconda3-latest-MacOSX-x86_64.sh
 conda config --add channels bioconda
 conda config --add channels conda-forge
-conda create -n urop-meta samtools bwa seqtk prokka prodigal megahit seqtk kraken2 maxbin2 openjdk metabat2 checkm-genome concoct
+conda create -n urop-meta samtools bwa prokka prodigal megahit kraken2 maxbin2 openjdk metabat2 checkm-genome concoct
 ```
 
 Set CheckM database - https://github.com/Ecogenomics/CheckM/wiki
