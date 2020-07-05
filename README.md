@@ -21,6 +21,7 @@ This script was written to automate the analysis of metagenomic data and is curr
 9. Predict contig genes with prokka and prodigal.
 
 ## Requirements
+(note: I am running this script with 8 cores and 64 GB of RAM)
 Install and setup MiniConda 3 - https://docs.conda.io/en/latest/miniconda.html
 ``` bash
 chmod +x chmod +x Miniconda3-latest-MacOSX-x86_64.sh
@@ -35,8 +36,6 @@ checkm data setRoot <checkm_data_dir>
 ```
 
 Download Kraken2 databases - https://github.com/DerrickWood/kraken2/wiki/Manual#standard-kraken-2-database
-
-(note: I am running this script with 8 cores and 64 GB of RAM)
 
 Standard dabatase (db1):
 ``` bash
