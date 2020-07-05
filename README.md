@@ -45,7 +45,7 @@ kraken2-build --threads N --download-taxonomy --db $DBNAME
 kraken2-build --download-library plants --db $DBNAME
 kraken2-build --download-library fungi --db $DBNAME
 kraken2-build --download-library protozoa --db $DBNAME
- kraken2-build --threads N --build --db $DBNAME
+kraken2-build --threads N --build --db $DBNAME
 ```
 
 ## Using UROP Metagenomics Pipeline
