@@ -72,5 +72,44 @@ chmod +x urop-meta.sh
 ```
 Results:
 ``` bash
-work in progress!
+06_bwa_mem_reference_mapping/$sample_id/$sample_id.mapping.mapped.sam
+                                       /$sample_id.mapping.unmapped.sam
+                                       /$sample_id.refmapping.sam
+
+08_megahit_contigs/$sample_id.metalarge.megahit/intermediate_contigs
+                                               /checkpoints.txt
+                                               /done
+                                               /final.contigs.fa
+                                               /final.contigs.fa.amb
+                                               /final.contigs.fa.ann
+                                               /final.contigs.fa.bwt
+                                               /final.contigs.fa.pac
+                                               /final.contigs.fa.sa
+                                               /$sample_id.contigs_10K.bed
+                                               /$sample_id.contigs_10K.fa
+                                               /$sample_id.coverage_table.tsv
+                                               /log/options.json
+
+09_megahit_contigs_check/$sample_id/$sample_id.metalarge.abundance.txt
+				                               /$sample_id.metalarge.check.sam
+				                               /$sample_id.metalarge.check.txt
+				                               /$sample_id.metalarge.depth.txt
+				                               /$sample_id.metalarge.sorted.bam
+                                   /$sample_id.metalarge.sorted.bam.bai
+
+10_binning/$sample_id/$sample_id.bin_refinement
+		                   /$sample_id.blobology
+                     /$sample_id.concoct
+                     /$sample_id.concoct.checkm
+                     /$sample_id.maxbin2
+                     /$sample_id.maxbin2.checkm
+                     /$sample_id.metabat2
+                     /$sample_id.metabat2.checkm
+
+11_taxonomy/1_unmapped
+	          /2_shortreads
+           /3_contigs
+
+12_genes/prodigal
+        /prokka
 ```
