@@ -76,6 +76,8 @@ Results:
                                        /$sample_id.mapping.unmapped.sam
                                        /$sample_id.refmapping.sam
 
+07_fasta_ready/$sample_id.ready.fasta
+
 08_megahit_contigs/$sample_id.metalarge.megahit/intermediate_contigs
                                                /checkpoints.txt
                                                /done
