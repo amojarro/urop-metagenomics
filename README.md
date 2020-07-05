@@ -38,15 +38,15 @@ Kraken2 databases - https://github.com/DerrickWood/kraken2/wiki/Manual#standard-
 
 Standard dabatase (db1):
 ``` bash
-kraken2-build --standard --threads N --db $DBNAME
+kraken2-build --standard --threads N --db $path/to/db1
 ```
 
 Custom database (db2):
 ``` bash
-kraken2-build --threads N --download-taxonomy --db $DBNAME
-kraken2-build --download-library plants --db $DBNAME
-kraken2-build --download-library fungi --db $DBNAME
-kraken2-build --download-library protozoa --db $DBNAME
+kraken2-build --threads N --download-taxonomy --db $path/to/db2
+kraken2-build --threads N --download-library plants --db $path/to/db2
+kraken2-build --threads N --download-library fungi --db $path/to/db2
+kraken2-build --threads N --download-library protozoa --db $path/to/db2
 kraken2-build --threads N --build --db $DBNAME
 ```
 
