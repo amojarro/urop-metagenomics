@@ -5,8 +5,8 @@
 # ./Miniconda3-latest-MacOSX-x86_64.sh <hit enter and follow the on-screen instructions to install>
 # conda config --add channels bioconda <hit enter to add the bioconda channel>
 # conda config --add channels conda-forge <hit enter to add the conda-forge channel>
-# conda create -n urop samtools bwa seqtk prokka prodigal megahit seqtk kraken2 maxbin2 openjdk metabat2 checkm-genome concoct 
-# conda activate urop
+# conda create -n urop-meta samtools bwa seqtk prokka prodigal megahit seqtk kraken2 maxbin2 openjdk metabat2 checkm-genome concoct 
+# conda activate urop-meta
 
 # define all variables and parameters
 clean_short_reads=""
