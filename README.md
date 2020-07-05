@@ -34,6 +34,20 @@ Set CheckM database - https://github.com/Ecogenomics/CheckM/wiki
 checkm data setRoot <checkm_data_dir>
 ```
 
+Kraken2 databases - https://github.com/DerrickWood/kraken2/wiki/Manual#standard-kraken-2-database
+Standard dabatase (db1)
+``` bash
+kraken2-build --standard --threads N --db $DBNAME
+```
+Custom database (db2)
+``` bash
+kraken2-build --threads N --download-taxonomy --db $DBNAME
+kraken2-build --download-library plants --db $DBNAME
+kraken2-build --download-library fungi --db $DBNAME
+kraken2-build --download-library protozoa --db $DBNAME
+ kraken2-build --threads N --build --db $DBNAME
+```
+
 ## Using UROP Metagenomics Pipeline
 Define the following paths and parameters.
 ``` bash
