@@ -2,7 +2,7 @@
  
 ## About
 ``` bash
-Angel Mojarro & Alexis D Cho
+Angel Mojarro (mojarro @ mit.edu) & Alexis D Cho (adcho @ mit.edu)
 ```
 ### Motivation
 
