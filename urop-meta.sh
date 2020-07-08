@@ -11,8 +11,8 @@
 # define all variables and parameters
 short_reads="" # remove adapters with cutadapt, adapterremoval etc. and other qc first
 reference_genome=""
-megahit_preset="meta-large" # meta-large meta-sensitive
-threads="8"
+megahit_preset="" # meta-large meta-sensitive
+threads=""
 output_folder=""
 sample_id=""
 kraken_db1=""
@@ -60,9 +60,9 @@ samtools view -b $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$
 samtools sort $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$megahit_preset.check.bam > $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$megahit_preset.sorted.bam
 rm $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$megahit_preset.check.bam
 
-# add contig QC
-# pass cleaned contigs to binning
-# look at Metagenome-Atlas config.yaml file for potential parameters
+# @adcho add contig QC
+# @adcho pass cleaned contigs to binning
+# @adcho look at Metagenome-Atlas config.yaml file for potential parameters
 
 # binning
 ## maxbin2
