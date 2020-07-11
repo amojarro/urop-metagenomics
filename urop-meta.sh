@@ -48,14 +48,19 @@ samtools view -S -f4 $output_folder/06_bwa_mem_reference_mapping/$sample_id/$sam
 samtools view -S -F4 $output_folder/06_bwa_mem_reference_mapping/$sample_id/$sample_id.refmapping.sam >  $output_folder/06_bwa_mem_reference_mapping/$sample_id/$sample_id.mapping.mapped.sam
 samtools fasta $output_folder/06_bwa_mem_reference_mapping/$sample_id/$sample_id.mapping.unmapped.sam > $output_folder/07_fasta_ready/$sample_id.ready.fasta
 
+# kraken and bracken analysis
+kraken2 --db $kraken_db1 $output_folder/07_fasta_ready/$sample_id.ready.fasta --output $output_folder/07_fasta_ready/$sample_id.kraken.db.output --report $output_folder/07_fasta_ready/$sample_id.kraken.db.report --threads $threads
+bracken -d $kraken_db1 -i $output_folder/07_fasta_ready/$sample_id.kraken.db.report -o $output_folder/07_fasta_ready/$sample_id.bracken -r 80
+
 # contigs
 echo Assembling contigs...
 megahit -t $threads --presets $megahit_preset -r $output_folder/07_fasta_ready/$sample_id.ready.fasta -o $output_folder/08_megahit_contigs/$sample_id.$megahit_preset.megahit
 
 # contigs check
 echo Mapping clean short-reads to contigs...
-bwa index  $output_folder/08_megahit_contigs/$sample_id.$megahit_preset.megahit/final.contigs.fa
-bwa mem -t $threads $output_folder/08_megahit_contigs/$sample_id.$megahit_preset.megahit/final.contigs.fa $output_folder/07_fasta_ready/$sample_id.ready.fasta > $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$megahit_preset.check.sam
+cutadapt -j $threads --minimum-length 200 -o $output_folder/08_megahit_contigs/$sample_id.$megahit_preset.megahit/$sample_id.filtered.contigs.fasta $output_folder/08_megahit_contigs/$sample_id.$megahit_preset.megahit/final.contigs.fa
+bwa index  $output_folder/08_megahit_contigs/$sample_id.$megahit_preset.megahit/$sample_id.filtered.contigs.fasta
+bwa mem -t $threads $output_folder/08_megahit_contigs/$sample_id.$megahit_preset.megahit/$sample_id.filtered.contigs.fasta $output_folder/07_fasta_ready/$sample_id.ready.fasta > $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$megahit_preset.check.sam
 samtools view -b $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$megahit_preset.check.sam > $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$megahit_preset.check.bam
 samtools sort $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$megahit_preset.check.bam > $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$megahit_preset.sorted.bam
 rm $output_folder/09_megahit_contigs_check/$sample_id/$sample_id.$megahit_preset.check.bam
